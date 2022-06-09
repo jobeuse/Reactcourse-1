@@ -1,9 +1,10 @@
 import "./styles.css";
+import ExpenseItems from "./components/ExpenseItems";
 
 export default function App() {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
+      <ExpenseItems />
       <h2>Start editing to see some magic happen!</h2>
     </div>
   );

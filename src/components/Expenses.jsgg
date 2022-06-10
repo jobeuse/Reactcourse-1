@@ -1,0 +1,15 @@
+import "./Expenses.css";
+import ExpenseItems from "./ExpenseItems";
+import Card from "../Card";
+function Expenses(props) {
+  return (
+    <Card className="expenses">
+      <ExpenseItems lists={props.items[0]} />
+      <ExpenseItems lists={props.items[1]} />
+      <ExpenseItems lists={props.items[2]} />
+      <ExpenseItems lists={props.items[3]} />
+    </Card>
+  );
+}
+
+export default Expenses;

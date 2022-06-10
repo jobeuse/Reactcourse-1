@@ -1,5 +1,5 @@
 import "./ExpenseDate.css";
-function ExpDate() {
+const ExpDate = () => {
   return (
     <div className="expense-date">
       <div className="expense-date__month">Jun</div>
@@ -7,5 +7,5 @@ function ExpDate() {
       <div className="expense-date__day">01</div>
     </div>
   );
-}
+};
 export default ExpDate;

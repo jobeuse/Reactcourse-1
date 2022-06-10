@@ -1,5 +1,7 @@
+import react, { useState } from "react";
 import "./ExpenseItems.css";
 import ExpDate from "./ExpensesDate";
+import Card from "../ui/Card";
 
 function Expense(props) {
   // const newList = props.lists.map((list) =>(
@@ -11,15 +13,22 @@ function Expense(props) {
   //   </div>
   // </div>
   // ));
-  console.log(props.lists[0]);
+  //console.log(props.lists);
+  const [title, setTitle] = useState(props.lists.title);
+
+  const clicked = () => {
+    setTitle("updated");
+    console.log(title);
+  };
   return (
-    <div className="expense-item">
+    <Card className="expense-item">
       <ExpDate />
+      {/* <button onClick={clicked}>change title</button> */}
       <div className="expense-item__description">
-        <h1> {props.lists[0].title}</h1>
-        <div className="expense-item__price"> {props.lists[0].amount}</div>
+        <h1> {title}</h1>
+        <div className="expense-item__price"> {props.lists.amount}</div>
       </div>
-    </div>
+    </Card>
   );
 }
 
